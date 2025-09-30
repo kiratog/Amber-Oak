@@ -180,14 +180,6 @@ header hr{
     text-shadow: 1px 1px 2px var(--secondary);
 }
 
-header a{
-    color: var(--accent2);
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-}
-
 /* Menus */
 
 #starters{
@@ -398,6 +390,8 @@ footer a:hover{
     font-weight: 600;
     font-size: 0.9em;
     text-align: center;
+    display: flex;
+    align-items: center;
     border-radius: 1.25rem;
     margin:13px 5px;
     height: 2rem;
@@ -406,6 +400,8 @@ footer a:hover{
     border: none;
     cursor: pointer;
     transition: background-color 0.2s, box-shadow 0.2s, color 0.2s;
+    text-decoration: none;
+    color: var(--accent2);
 }
 
 
@@ -500,5 +496,4 @@ footer a:hover{
     background-color: rgba(252, 192, 73, 0.282);
 }
 
-/* Input box */
 
