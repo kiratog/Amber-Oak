@@ -1,0 +1,502 @@
+:root{
+       /* CSS HEX */
+   --accent2: #003049ff;
+   --accent1: #d62828ff;
+   --secondary: #f77f00ff;
+   --primary2: #fcbf49ff;
+   --primary1: #eae2b7ff;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif ;
+    background-color: var(--primary1);
+    color: var(--accent2);
+
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Archivo Black', sans-serif;
+}
+
+     /* Navbar */
+     
+nav{
+    background-color: var(--primary2);
+    box-shadow: 2px 0 5px var(--accent2);
+    padding: 0rem 1rem;
+}
+
+nav ul{
+    width: 100%;
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+nav li{
+    height: 60px;
+    transition: 0.5s;
+}
+
+nav a{
+    height: 100%;
+    padding: 0 1rem;
+    font-weight: 300;
+    color: var(--accent2);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+    cursor: pointer;
+   
+}
+
+nav li:first-child{
+    margin-right: auto;
+}
+
+nav i{
+    height: 26px;
+    width: 26px;
+}
+
+#nav-logo{
+    height: 3em;
+    border: 1px solid var(--accent2);
+    border-radius: 1.5em;
+}
+
+#sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(252, 192, 73, 0.35);
+    box-shadow: -2px 0 10px var(--accent2);
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+#sidebar li:not(:last-child){
+    width: 100%;
+}
+
+#sidebar a:not(:last-child){
+    width: 100%;
+}
+
+#sidebar .btn{
+    margin: 0 0.5rem;
+}
+
+nav li:not(:last-child):hover{
+    background-color: rgb(235, 179, 69);
+}
+
+@media(max-width: 800px) {
+    .hideonmobile{
+        display: none;
+    }
+    .not-flex-onmob{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media(min-width: 800px) {
+    .hideondesktop{
+        display: none;
+    }
+
+     
+}
+
+@media(max-width:400px){
+    #sidebar{
+        width: 100%;
+    }
+
+}
+
+
+/* Header */
+header{
+    background-image: url(images/grill.jpg);
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(20px);
+}
+
+header div{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+    align-items: center;
+    justify-content: center;
+}
+
+header hr{
+    width: 90%;
+    border: 1px solid var(--accent2);
+}
+
+#hero-heading, #hero-subheading, #tagline{
+    color: var(--primary1);
+}
+
+#tagline{
+    font-size: 0.9rem;
+}
+
+#hero-heading{
+    font-size: 3rem;
+    text-shadow: 4px 4px 6px var(--accent2);
+    margin: 0 0.5rem;
+}
+
+#hero-subheading{
+    margin: 1rem auto;
+    font-size: 1.25rem;
+    color: var(--primary2);
+    text-shadow: 1px 1px 2px var(--secondary);
+}
+
+header a{
+    color: var(--accent2);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Menus */
+
+#starters{
+    background-image: url(images/starter.jpg);
+}
+
+#mains{
+    background-image: url(images/veg-burger.jpg);
+}
+
+#sides{
+    background-image: url(images/fried-veggies.jpg);
+}
+
+#desserts{
+    background-image: url(images/Chocolate-cake.jpg);
+}
+
+#drinks{
+    background-image: url(images/lemanide.jpg);
+}
+
+/* About */
+
+#chef-bg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.abt-containers{
+    height: auto;
+    width: 22rem;
+    margin: 1rem;
+}
+
+#about #chef-bg img{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px var(--accent2);
+}
+
+#about h5{
+    font-size: 2rem;
+    color: var(--secondary);
+    margin: 1rem 0;
+    text-shadow: 1px 1px 3px var(--accent2);
+}
+
+#about p{
+    font-size: 90%;
+}
+
+#story{
+    background-image: url(images/resaurant.jpg);
+    text-align: center;
+}
+
+#story-container{
+    padding: 2rem;
+}
+
+#mission{
+    padding: 3rem;
+
+    background-color: var(--primary2);
+}
+
+/* Registration form */
+
+#action{
+    padding: 50px;
+}
+
+form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    overflow: scroll;
+}
+
+form .user-details .input-box{
+    width: calc( 50% - 20px);
+    margin: 20px 0 12px 0;
+}
+
+.user-details .input-box input{
+    background: none;
+    border: none;
+    border-bottom:1px solid var(--secondary);
+    height: 45px;
+    width:100%;
+    font-size: 16px;
+    outline: none;
+}
+
+.user-details .input-box .details{
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+#request-div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#request-div textarea{
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 8px;
+    outline: 0;
+    resize: none;
+    height: 300px;
+    width: 350px;
+}
+
+#button{
+    display: inline;
+    margin: auto 38%;
+}
+
+@media (max-width: 584px) {
+
+
+    form .user-details .input-box{
+    width: 100%;
+    margin: 15px;
+    }
+    #action{
+        max-width: 100%;
+    }
+    #request-div{
+    margin: 50px;
+    }
+    #button{
+    margin: auto 35%;
+    }
+    
+}
+
+/* Footer */
+
+footer img{
+    height: 200px;
+}
+
+footer{
+    background-color: var(--primary2);
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+}
+footer #main-footer{
+    display: flex;
+    gap: 50px;
+}
+
+footer #main-footer #fsec4{
+    width: fit-content;
+}
+footer #main-footer ul{
+    list-style: none;
+}
+footer #main-footer a{
+    text-decoration: none;
+    color: var(--accent2);
+    cursor: pointer;
+    
+}
+
+footer #main-footer{
+    font-size:13px;
+}
+
+footer #fsec1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#cright-footer{
+    margin: 20px;
+}
+
+@media (max-width: 920px) {
+    footer #main-footer{
+        flex-wrap: wrap;
+    }
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
+/* Utilites */
+
+ /* buttun */
+.btn{
+    
+    background-color: var(--secondary);
+    font-weight: 600;
+    font-size: 0.9em;
+    text-align: center;
+    border-radius: 1.25rem;
+    margin:13px 5px;
+    height: 2rem;
+    padding: 0.5rem 1rem;
+    box-shadow: 1px 1px 3px var(--accent2);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.2s, color 0.2s;
+}
+
+
+.btn:hover{
+    background-color: var(--primary2);
+    box-shadow: inset 1px 1px 3px var(--accent2);
+}
+
+.btn:active{
+    background-color: var(--accent2);
+    color: var(--primary1);
+    box-shadow: 1px 1px 3px var(--accent2);
+}
+
+
+/* Heading */
+
+.heading{
+    font-size: 2rem;
+    text-align: center;
+    margin: 1rem auto;
+    color: var(--accent2);
+    font-weight: 100;
+}
+
+.heading1{
+    font-size: 2rem;
+    margin: 1rem auto;
+    color: var(--accent1);
+    font-weight: 100;
+}
+
+.menu-subheading{
+   width: 100%; 
+   border-bottom: 1px dotted var(--accent2); 
+   line-height: 0.1em;
+   margin: 10px 0 20px; 
+   padding: 0 50px;
+   color: var(--secondary);
+   text-shadow: 1px 1px 2px var(--primary2);
+}
+
+.mn-heading-span{
+    background: var(--primary1);
+    padding: 0 5px;
+}
+
+/* Tables */
+
+.itemsli{
+    border-top: 1px dotted var(--accent2);
+    border-bottom: 1px dotted var(--accent2);
+    border-collapse:collapse ;
+    width: 80%;
+    margin: 2rem 1rem;
+    border-spacing: 100px;
+    color: var(--accent2);
+}
+
+.itemsli th, td {
+  padding: 10px;
+}
+
+
+.itemsli tr{
+    border-top: 1px dotted var(--accent2);
+    border-bottom: 1px dotted var(--accent2);
+    padding: 10vh 10vw;
+
+}
+
+.tblhead{
+    border: 1px dotted var(--accent2);
+    text-align: left;
+}
+
+/* Backgrounds */
+
+.stdbg{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.blured-bg{
+    padding: 1vh 2vw;
+    backdrop-filter:blur(8px);
+    border-radius:6px ;
+    box-shadow: 1px 1px 6px 2px var(--accent2);
+    background-color: rgba(252, 192, 73, 0.282);
+}
+
+/* Input box */
+

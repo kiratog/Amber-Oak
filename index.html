@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Ember & Oak | Modern Grill & Café</title>
+    <link rel="icon" type="images/png" href="images/logo1.png">
+</head>
+<body>
+    <nav>
+        
+         <ul id="sidebar">
+            <li onclick=hideSidebar()><a href="#"><img src="images/croosx.svg" style="height: 26px; width:26px" alt="close button"></a></li>
+            <li><a onclick=hideSidebar() href="#home">Home</a></li>
+            <li><a onclick=hideSidebar() href="#menu">Menu</a></li>
+            <li><a onclick=hideSidebar() href="#about">About</a></li>
+            <li><a onclick=hideSidebar() href="#contact">Contact Us</a></li>
+            <li><a onclick=hideSidebar() class="btn" href="#action">Book a table</a></li>
+        </ul>
+
+        <ul>
+            <li><a href="index.html"><img id="nav-logo" src="images/logo1.png" alt="Logo"></a></li>
+            <li class="hideonmobile"><a href="#home">Home</a></li>
+            <li class="hideonmobile"><a href="#menu">Menu</a></li>
+            <li class="hideonmobile"><a href="#about">About</a></li>
+            <li class="hideonmobile"><a href="#action" class="btn">Book a table</a></li>
+            <li class="hideonmobile"><a href="#contact">Contact Us</a></li>
+            <li class="hideondesktop" onclick=showSidebar()><a href="#"><img src="images/hamburgermenu.svg" alt="menu" style="height: 26px;"></a></li>
+        </ul>
+    </nav>
+
+    <header id="home">
+        <div id="header-container">
+            <h1 id="hero-heading">Ember & Oak</h1>
+            <p id="tagline">Modern Grill & Café</p>
+            <hr>
+            <p id="hero-subheading" class="sub-heading">Where Fire🔥 Meets Flavor!</p>
+            <button id="action-btn"><a href="#action" class="btn">Book a table</a></button>
+        </div>
+    </header>
+
+    <section id="menu">
+        <h4 id="menu-heading" class="heading">Menus</h4>
+        <div id="menus-container">
+            <h3 class="menu-subheading"><span class="mn-heading-span">Starters</span></h3>
+            <div id="starters" class="stdbg">
+                <div class="blured-bg">
+                    <table id="starter" class="itemsli">
+                    <tr class="tblhead">
+                        <th>Item</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <td>Grilled Halloumi Skewers</td>
+                        <td>$8</td>
+                    </tr>
+                    <tr>
+                        <td>Spicy Garlic Shrimp</td>
+                        <td>$10</td>
+                    </tr>
+                    <tr>
+                        <td>Roasted Red Pepper Soup</td>
+                        <td>$6</td>
+                    </tr>
+                </table>
+                </div>
+            </div>
+            <h3 class="menu-subheading"><span class="mn-heading-span">Mains</span></h3>
+            <div id="mains" class="stdbg">
+                <div class="blured-bg">
+                    <table class="itemsli">
+                    <tr class="tblhead">
+                        <th>Item</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <td>Oak-Smoked Ribeye Steak</td>
+                        <td>$22</td>
+                    </tr>
+                    <tr>
+                        <td>Honey-Glazed Salmon</td>
+                        <td>$19</td>
+                    </tr>
+                    <tr>
+                        <td>Veggie Burger with Sweet Potato Fries</td>
+                        <td>$14</td>
+                    </tr>
+                </table>
+                </div>
+            </div>
+            <h3 class="menu-subheading"><span class="mn-heading-span">Sides</span></h3>
+            <div id="sides" class="stdbg">
+                <div class="blured-bg">
+                    <table class="itemsli">
+                    <tr class="tblhead">
+                        <th>Item</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <td>Garlic Mashed Potatoes</td>
+                        <td>$5</td>
+                    </tr>
+                    <tr>
+                        <td>Charred Seasonal Vegetables</td>
+                        <td>$6</td>
+                    </tr>
+                    <tr>
+                        <td>Truffle Fries</td>
+                        <td>$6</td>
+                    </tr>
+                </table>
+                </div>
+            </div>
+            <h3 class="menu-subheading"><span class="mn-heading-span">Desserts</span></h3>
+            <div id="desserts" class="stdbg">
+                <div class="blured-bg">
+                    <table class="itemsli">
+                    <tr class="tblhead">
+                        <th>Item</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <td>Chocolate Lava Cake</td>
+                        <td>$8</td>
+                    </tr>
+                    <tr>
+                        <td>Classic Tiramisu</td>
+                        <td>$7</td>
+                    </tr>
+                    <tr>
+                        <td>Vanilla Bean Cheesecake</td>
+                        <td>$7</td>
+                    </tr>
+                </table>
+                </div>
+            </div>
+            <h3 class="menu-subheading"><span class="mn-heading-span">Drinks</span></h3>
+            <div id="drinks" class="stdbg">
+                <div class="blured-bg">
+                    <table class="itemsli">
+                    <tr class="tblhead">
+                        <th>Item</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <td>Freshly Brewed Coffee</td>
+                        <td>$3</td>
+                    </tr>
+                    <tr>
+                        <td>Iced Matcha Latte</td>
+                        <td>$4</td>
+                    </tr>
+                    <tr>
+                        <td>Craft Lemonade</td>
+                        <td>$3</td>
+                    </tr>
+                </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h4 id="about-heading" class="heading">About</h4>
+        <div id="chef-bg" class="not-flex-onmob">
+            <div id="chef-container" class="abt-containers">
+                <img src="images/chef.jpg" alt="restaurant image">
+            </div>
+            <div id="bg-txt" class="abt-containers">
+                <h5>Chef’s Background</h5>
+                <p>
+                    Our chef started in a humble family kitchen, learning to balance flavors from parents and grandparents. With curiosity as his main ingredient, he explored street food stalls, fine dining kitchens, and local farms.
+                    Now, all that experience comes alive in our kitchen — where the chef combines authenticity with innovation.
+                </p>
+            </div>
+        </div>
+
+        <div id="story" class="stdbg">
+            <div id="story-container" class="blured-bg">
+                <h5 id="story-heading">Restaurant Story</h5>
+                <p id="story-txt">
+                    Our restaurant was born from a simple idea: food should feel like home, but taste like adventure.
+                    The founder (our imaginary chef) grew up in a small town where family dinners were sacred. Later, after traveling across India (and beyond), the chef discovered how different cultures share one thing in common — food that brings people together.
+                    Inspired by this, the chef decided to create a place where traditional recipes meet modern creativity. Every dish on the menu has a story — some passed down for generations, others crafted from travel memories.
+                </p>
+            </div>
+        </div>
+        <div id="mission">
+            <h5 class="heading1">Mission & Values</h5>
+            <ul>
+                <li><h6>Mission:</h6>To serve dishes that connect hearts, spark conversations, and turn every meal into a memory.<br></li>
+                <li><h6>Values:</h6>
+                    <ul>
+                        <li><h6>Freshness first:</h6> We use seasonal, locally sourced ingredients.</li>
+                        <li><h6>Respect for tradition:</h6> Honoring timeless recipes while giving them a modern twist.</li>
+                        <li><h6>Community spirit:</h6> Food is better when shared — that’s why our space is built for togetherness.</li>
+                        <li><h6>Sustainability:</h6> Minimizing waste, supporting local farmers, and making conscious choices.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="action">
+        <div class="headingd"><h2 class="heading">Register for Table</h2></div>
+        <form action="#">
+            <div class="user-details">
+                <div id="fname-div" class="input-box">
+                    <span class="details">Full Name</span>
+                    <input type="text" id="fname" placeholder="Enter Full Name">
+                </div>
+                <div id="number-div" class="input-box">
+                    <span class="details">Phone Number</span>
+                    <input type="tel" id="number" placeholder="Enter Phone number">
+                </div>
+                <div id="email-div" class="input-box">
+                    <span class="details">Email Address</span>
+                    <input type="email" id="email" placeholder="Enter email Address">
+                </div>
+                <div id="date-div" class="input-box">
+                    <span class="details">Date & Time</span>
+                    <input type="datetime-local" id="date">
+                </div>
+                <div id="nguests-div" class="input-box">
+                    <span class="details">Number of people</span>
+                    <input type="number" id="nguests">
+                </div>
+                <div id="request-div">
+                    <span>Special Requests</span>
+                    <textarea id="request" placeholder="Type your request"></textarea>
+                </div>
+                
+            </div>
+        </form>
+        <div id="button" >
+                <input type="submit" class="btn" value="Book a Table">
+                    
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div id="main-footer">
+            <div id="f-sec1">
+                <div id="f-logo"><img src="images/logo1.png" alt="Ember & Oak logo"></div>
+                <div><h3>Where Fire Meets Flavor!</h3></div>
+            </div>
+            <div id="fsec2">
+                <h5 id="quecklinks">Quick Links</h5>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#cantact">Contact us</a></li>
+                    <li><a href="#home">Register for table</a></li>
+                </ul>
+            </div>
+            <div id="fsec3">
+                <h5>Opening Hours</h5>
+                <p>Mon-Fri: 09:00AM - 09:00PM</p>
+                <p>Mon-Fri: 10:00AM - 05:00PM</p>
+            </div>
+            <div id="fsec4">
+                <h5>Contact us</h5>
+                <p>Mobile: +19-98765-43210</p>
+                <p>Gmail: emberandoak@gmail.com</p>
+                <p>Address: Ember & Oak - Modern Grill & Cafe 123 Flame Sreet, Erripooknagar, 696969,India</p>
+            </div>
+        </div>
+        <div id="cright-footer">&#169;2025 Ember & Oak. All Rights Not Reservered</div>
+    </footer>
+
+    <script>
+        function showSidebar(){
+            const sidebar = document.getElementById("sidebar");
+            sidebar.style.display='flex'
+        }
+
+         function hideSidebar(){
+            const sidebar = document.getElementById("sidebar");
+            sidebar.style.display='none'
+        }
+    </script>
+</body>
+</html>
