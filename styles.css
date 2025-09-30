@@ -183,6 +183,8 @@ header hr{
 header a{
     color: var(--accent2);
     text-decoration: none;
+    display: flex;
+    align-items: center;
     cursor: pointer;
 }
 
